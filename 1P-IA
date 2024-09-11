@@ -114,7 +114,7 @@ modelo_final.fit(X_entrenamiento, y_entrenamiento, validation_data=(X_validacion
 mae = modelo_final.evaluate(X_validacion, y_validacion, verbose=0)
 print(f'MAE en validación: {mae}')
 
-#Calcular las otras metricas como funcion objetivo para opt de parametros
+#Calcular las otras metricas como Precision,recall y F1
 
 y_prediccion=modelo_final.predict(X_entrenamiento)
 y_prediccion_clases=np.argmax(y_prediccion,axis=1)
